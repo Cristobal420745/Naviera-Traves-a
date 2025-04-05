@@ -69,19 +69,18 @@
       text-align: center;
     }
     .contact-section h2 {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
     .contact-content {
       display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
       max-width: 1100px;
       margin: 0 auto;
-      gap: 60px;
+      gap: 30px;
     }
     .contact-info {
-      max-width: 300px;
+      font-size: 0.9em;
       text-align: left;
     }
     .contact-info h3 {
@@ -91,12 +90,6 @@
     .contact-info p {
       margin: 0 0 15px 0;
     }
-    .contact-form-container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-left: auto;
-    }
     form {
       width: 400px;
       background-color: #fff;
@@ -105,6 +98,7 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       display: flex;
       flex-direction: column;
+      align-items: stretch;
     }
     form input,
     form textarea {
@@ -169,22 +163,15 @@
         <p>Av. Italia N°2326<br>
         Fono: +56 6 5227 0700</p>
       </div>
-      <div class="contact-form-container">
-        <form action="https://formsubmit.co/contacto@travesia.cl" method="POST">
-          <input type="text" name="name" placeholder="Nombre" required>
-          <input type="email" name="email" placeholder="Correo" required>
-          <textarea name="message" placeholder="Escribe tu mensaje" rows="5" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
+      <form action="https://formsubmit.co/contacto@travesia.cl" method="POST">
+        <input type="text" name="name" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo" required>
+        <textarea name="message" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
     </div>
   </div>
 
-  <div class="footer">
-    &copy; 2025 Naviera Travesía. Todos los derechos reservados.
-  </div>
-</body>
-</html>
   <div class="footer">
     &copy; 2025 Naviera Travesía. Todos los derechos reservados.
   </div>
