@@ -68,19 +68,25 @@
       color: #fff;
       text-align: center;
     }
-    .contact-container {
+    .contact-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .contact-content {
       display: flex;
       justify-content: center;
       align-items: flex-start;
       flex-wrap: wrap;
       gap: 40px;
-      max-width: 1000px;
-      margin: 0 auto;
+      width: 100%;
     }
     .contact-info {
       max-width: 300px;
       text-align: left;
-      margin-right: auto;
       margin-left: 20px;
     }
     .contact-info h3 {
@@ -91,7 +97,9 @@
       margin: 0 0 15px 0;
     }
     form {
-      max-width: 600px;
+      flex: 1;
+      min-width: 320px;
+      max-width: 650px;
       background-color: #fff;
       padding: 30px;
       border-radius: 10px;
@@ -152,22 +160,24 @@
 
   <div class="contact-section">
     <h2>Contacto</h2>
-    <div class="contact-container">
-      <div class="contact-info">
-        <h3>Santiago</h3>
-        <p>Av. Vitacura 2939, Las Condes<br>
-        Fono: +56 2 2337 3800</p>
-
-        <h3>Puerto Montt</h3>
-        <p>Av. Italia N°2326<br>
-        Fono: +56 6 5227 0700</p>
-      </div>
+    <div class="contact-wrapper">
       <form action="https://formsubmit.co/contacto@travesia.cl" method="POST">
         <input type="text" name="name" placeholder="Nombre" required>
         <input type="email" name="email" placeholder="Correo" required>
         <textarea name="message" placeholder="Escribe tu mensaje" rows="5" required></textarea>
         <button type="submit">Enviar</button>
       </form>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Santiago</h3>
+          <p>Av. Vitacura 2939, Las Condes<br>
+          Fono: +56 2 2337 3800</p>
+
+          <h3>Puerto Montt</h3>
+          <p>Av. Italia N°2326<br>
+          Fono: +56 6 5227 0700</p>
+        </div>
+      </div>
     </div>
   </div>
 
