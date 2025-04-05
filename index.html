@@ -68,20 +68,19 @@
       color: #fff;
       text-align: center;
     }
-    .contact-container {
+    .contact-section h2 {
+      margin-bottom: 40px;
+    }
+    .contact-content {
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      justify-content: space-between;
       flex-wrap: wrap;
-      gap: 60px;
       max-width: 1100px;
-      margin: 0 auto;
+      margin: 0 auto 40px auto;
     }
     .contact-info {
       max-width: 300px;
       text-align: left;
-      margin-right: auto;
-      margin-left: 20px;
     }
     .contact-info h3 {
       color: red;
@@ -89,6 +88,10 @@
     }
     .contact-info p {
       margin: 0 0 15px 0;
+    }
+    .contact-form-container {
+      display: flex;
+      justify-content: center;
     }
     form {
       width: 400px;
@@ -152,7 +155,7 @@
 
   <div class="contact-section">
     <h2>Contacto</h2>
-    <div class="contact-container">
+    <div class="contact-content">
       <div class="contact-info">
         <h3>Santiago</h3>
         <p>Av. Vitacura 2939, Las Condes<br>
@@ -162,6 +165,8 @@
         <p>Av. Italia N°2326<br>
         Fono: +56 6 5227 0700</p>
       </div>
+    </div>
+    <div class="contact-form-container">
       <form action="https://formsubmit.co/contacto@travesia.cl" method="POST">
         <input type="text" name="name" placeholder="Nombre" required>
         <input type="email" name="email" placeholder="Correo" required>
@@ -170,6 +175,12 @@
       </form>
     </div>
   </div>
+
+  <div class="footer">
+    &copy; 2025 Naviera Travesía. Todos los derechos reservados.
+  </div>
+</body>
+</html>
 
   <div class="footer">
     &copy; 2025 Naviera Travesía. Todos los derechos reservados.
