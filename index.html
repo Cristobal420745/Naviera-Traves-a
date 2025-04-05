@@ -63,37 +63,30 @@
       text-decoration: underline;
     }
     .contact-section {
-      padding: 30px 40px;
+      padding: 40px 20px;
       background-color: #222;
       color: #fff;
-    }
-    .contact-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 60px;
-      flex-wrap: wrap;
-      align-items: flex-start;
+      text-align: center;
     }
     .contact-info {
-      max-width: 300px;
-      text-align: left;
-      font-size: 1em;
-      margin-left: 30px;
+      margin-bottom: 30px;
     }
     .contact-info h3 {
       color: red;
       margin-bottom: 5px;
     }
+    .contact-info p {
+      margin: 0 0 15px 0;
+    }
     form {
-      max-width: 500px;
+      max-width: 600px;
+      margin: 0 auto;
       background-color: #fff;
-      padding: 30px 30px;
+      padding: 30px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       display: flex;
       flex-direction: column;
-      align-items: center;
     }
     form input,
     form textarea {
@@ -113,6 +106,7 @@
       cursor: pointer;
       font-size: 1em;
       transition: all 0.3s ease;
+      align-self: center;
     }
     button:hover {
       transform: scale(1.05);
@@ -147,23 +141,21 @@
 
   <div class="contact-section">
     <h2>Contacto</h2>
-    <div class="contact-container">
-      <div class="contact-info">
-        <h3>Santiago</h3>
-        <p>Av. Vitacura 2939, Las Condes<br>
-        Fono: +56 2 2337 3800</p>
+    <div class="contact-info">
+      <h3>Santiago</h3>
+      <p>Av. Vitacura 2939, Las Condes<br>
+      Fono: +56 2 2337 3800</p>
 
-        <h3>Puerto Montt</h3>
-        <p>Av. Italia N°2326<br>
-        Fono: +56 6 5227 0700</p>
-      </div>
-      <form action="https://formsubmit.co/contacto@travesia.cl" method="POST">
-        <input type="text" name="name" placeholder="Nombre" required>
-        <input type="email" name="email" placeholder="Correo" required>
-        <textarea name="message" placeholder="Escribe tu mensaje" rows="5" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+      <h3>Puerto Montt</h3>
+      <p>Av. Italia N°2326<br>
+      Fono: +56 6 5227 0700</p>
     </div>
+    <form action="https://formsubmit.co/contacto@travesia.cl" method="POST">
+      <input type="text" name="name" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Correo" required>
+      <textarea name="message" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
   </div>
 
   <div class="footer">
