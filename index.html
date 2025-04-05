@@ -63,8 +63,12 @@
       text-decoration: underline;
     }
     form {
-      max-width: 500px;
+      max-width: 400px;
       margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     input, textarea {
       width: 100%;
@@ -86,6 +90,28 @@
     button:hover {
       background-color: #555;
     }
+    .contact-section {
+      background-image: url('WB_Sooke_2.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 80px 20px;
+      position: relative;
+      color: #fff;
+    }
+    .contact-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+    .contact-section > * {
+      position: relative;
+      z-index: 2;
+    }
     .footer {
       background: #eaeaea;
       text-align: center;
@@ -106,13 +132,13 @@
 
   <div class="section">
     <h2>Canal de Denuncias</h2>
-    <p>Para reportar cualquier irregularidad o situación, por favor escribe a: <br><br>
+    <p>Para reportar cualquier irregularidad o situación negligente, por favor dirígete a: <br><br>
     <a href="https://navieratravesia.canaldenunciasanonimas.com/home" target="_blank">
-      canaldenuncias@travesia.cl
+      Canal de Denuncias Naviera Travesía 
     </a></p>
   </div>
 
-  <div class="section">
+  <div class="contact-section">
     <h2>Contacto</h2>
     <form action="https://formsubmit.co/contacto@travesia.cl" method="POST">
       <input type="text" name="name" placeholder="Nombre" required>
