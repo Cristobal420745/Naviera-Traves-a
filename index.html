@@ -73,10 +73,12 @@
     }
     .contact-content {
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: nowrap;
       max-width: 1100px;
-      margin: 0 auto 40px auto;
+      margin: 0 auto;
+      gap: 40px;
     }
     .contact-info {
       max-width: 300px;
@@ -91,7 +93,8 @@
     }
     .contact-form-container {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
     }
     form {
       width: 400px;
@@ -165,14 +168,14 @@
         <p>Av. Italia N°2326<br>
         Fono: +56 6 5227 0700</p>
       </div>
-    </div>
-    <div class="contact-form-container">
-      <form action="https://formsubmit.co/contacto@travesia.cl" method="POST">
-        <input type="text" name="name" placeholder="Nombre" required>
-        <input type="email" name="email" placeholder="Correo" required>
-        <textarea name="message" placeholder="Escribe tu mensaje" rows="5" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+      <div class="contact-form-container">
+        <form action="https://formsubmit.co/contacto@travesia.cl" method="POST">
+          <input type="text" name="name" placeholder="Nombre" required>
+          <input type="email" name="email" placeholder="Correo" required>
+          <textarea name="message" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
     </div>
   </div>
 
