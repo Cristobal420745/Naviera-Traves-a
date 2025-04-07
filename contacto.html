@@ -1,6 +1,6 @@
 from pathlib import Path
 
-# Código HTML del archivo contacto.html
+# Código HTML del archivo contacto.html actualizado con el favicon correcto
 contact_html = """
 <!DOCTYPE html>
 <html lang="es">
@@ -23,16 +23,12 @@ contact_html = """
     }
 
     header {
-      background: #222;
-      color: white;
+      background: #ffffff;
+      color: #000;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 10px 30px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
     header img {
@@ -41,14 +37,14 @@ contact_html = """
 
     nav {
       display: flex;
-      gap: 30px;
+      gap: 20px;
     }
 
     nav a {
-      color: white;
+      color: #000;
       text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
+      font-weight: bold;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
@@ -122,7 +118,7 @@ contact_html = """
 </head>
 <body>
   <header>
-    <img src="Logo_Naviera_Travesia.png" alt="Naviera Travesía" />
+    <img src="descargar (2).png" alt="Naviera Travesía" />
     <nav>
       <a href="index.html">Inicio</a>
       <a href="contacto.html">Contacto</a>
@@ -154,7 +150,7 @@ contact_html = """
 </html>
 """
 
-# Guardar el archivo
+# Guardamos el archivo
 path = Path("/mnt/data/contacto.html")
 path.write_text(contact_html, encoding="utf-8")
 path.name
