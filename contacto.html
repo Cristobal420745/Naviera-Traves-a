@@ -53,14 +53,14 @@
       color: #ff3c3c;
     }
 
- nav a:not(:first-child)::before {
+nav a:not(:first-child)::before {
   content: '•';
   color: red;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 12px;
+  font-size: 20px;           /* ← Tamaño más grande, como antes */
+  margin-right: 10px;        /* ← Separación entre punto y texto */
+  vertical-align: middle;    /* ← Alineación centrada verticalmente */
+  display: inline-block;
+  line-height: 1;
 }
     .section {
       padding: 50px 20px;
