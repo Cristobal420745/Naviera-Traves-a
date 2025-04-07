@@ -1,3 +1,7 @@
+from pathlib import Path
+
+# Código actualizado del archivo index.html con enlace a "Canal de Denuncias"
+updated_index_html = """
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -34,7 +38,7 @@
     }
 
     nav a:hover {
-      color: #ff3c3c; /* Rojo al pasar el cursor */
+      color: #ff3c3c;
     }
 
     /* Imagen de fondo */
@@ -90,6 +94,7 @@
     <nav>
       <a href="index.html">Inicio</a>
       <a href="contacto.html">Contacto</a>
+      <a href="https://navieratravesia.canaldenunciasanonimas.com/home" target="_blank">Canal de Denuncias</a>
     </nav>
   </header>
 
@@ -115,5 +120,11 @@
 
 </body>
 </html>
+"""
+
+# Guardar el archivo actualizado
+index_path = Path("/mnt/data/index.html")
+index_path.write_text(updated_index_html, encoding="utf-8")
+index_path.name
 
 
