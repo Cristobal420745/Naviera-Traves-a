@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto - Naviera Travesía</title>
+  <title>Naviera Travesía</title>
   <link rel="icon" type="image/png" href="descargar.png" />
   <style>
     * {
@@ -52,53 +51,60 @@
       color: #ff3c3c;
     }
 
+    .hero {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('WB_Sooke_2.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+      font-size: 2.8em;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px 40px;
+      border-radius: 10px;
+    }
+
     .section {
       padding: 50px 20px;
       text-align: center;
+    }
+
+    .section:nth-child(even) {
       background-color: #f1f1f1;
     }
 
-    h1 {
-      margin-bottom: 20px;
-      font-size: 2.5em;
+    .dark-section {
+      background-color: #222;
+      color: #fff;
     }
 
-    p {
+    .light-section {
+      background-color: #f1f1f1;
+      color: #222;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .section p {
       font-size: 1.1em;
       line-height: 1.6;
     }
 
-    .formulario {
-      background: #fff;
-      max-width: 600px;
-      margin: 30px auto;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1em;
-    }
-
-    button {
-      background-color: #222;
+    .section a {
       color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #444;
+      text-decoration: underline;
     }
 
     .footer {
@@ -108,16 +114,11 @@
       font-size: 0.9em;
       color: #666;
     }
-
-    .back-link {
-      display: block;
-      margin-top: 30px;
-      color: #0066cc;
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
+
+  <!-- Menú de navegación -->
   <header>
     <img src="Logo_Naviera_Travesia.png" alt="Naviera Travesía" />
     <nav>
@@ -126,26 +127,35 @@
     </nav>
   </header>
 
-  <div class="section">
-    <h1>Contacto</h1>
-    <p>Si deseas comunicarte con nosotros, por favor completa el siguiente formulario:</p>
+  <!-- Imagen destacada -->
+  <div class="hero">
+    <h1>Naviera Travesía</h1>
+  </div>
 
-    <div class="formulario">
-      <form action="#" method="post">
-        <input type="text" name="nombre" placeholder="Nombre" required />
-        <input type="email" name="correo" placeholder="Correo electrónico" required />
-        <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-
-    <p class="back-link">
-      <a href="index.html">&larr; Volver al inicio</a>
+  <!-- Canal de denuncias -->
+  <div class="section dark-section">
+    <h2>Canal de Denuncias</h2>
+    <p>
+      Para reportar cualquier irregularidad o situación negligente, por favor dirígete a: <br><br>
+      <a href="https://navieratravesia.canaldenunciasanonimas.com/home" target="_blank">
+        Canal de Denuncias Naviera Travesía
+      </a>
     </p>
   </div>
 
+  <!-- Contacto simple -->
+  <div class="section light-section">
+    <h2>Contacto</h2>
+    <p>
+      Si deseas comunicarte con nosotros:<br><br>
+      <strong>contacto@travesia.cl</strong>
+    </p>
+  </div>
+
+  <!-- Pie de página -->
   <div class="footer">
     &copy; 2025 Naviera Travesía. Todos los derechos reservados.
   </div>
+
 </body>
 </html>
