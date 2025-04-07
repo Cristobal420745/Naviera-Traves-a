@@ -6,49 +6,30 @@
   <title>Naviera Travesía</title>
   <link rel="icon" type="image/png" href="descargar.png" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9f9f9;
       color: #222;
     }
 
     header {
-      background: #222;
-      color: white;
+      background: #1a1a1a;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       padding: 10px 30px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
-    header img {
-      max-height: 40px;
-    }
-
-    nav {
-      display: flex;
-      gap: 30px;
+    .logo img {
+      max-width: 120px; /* Tamaño aumentado del logo */
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ff3c3c;
+      margin-left: 20px;
+      font-weight: bold;
     }
 
     .hero {
@@ -56,53 +37,28 @@
         url('WB_Sooke_2.jpg');
       background-size: cover;
       background-position: center;
-      height: 60vh;
+      height: 80vh;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .hero h1 {
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-weight: bold;
-      font-size: 2.8em;
-      color: #fff;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.7);
       padding: 20px 40px;
+      font-size: 2.8em;
+      color: white;
       border-radius: 10px;
     }
 
-    .section {
-      padding: 50px 20px;
+    .denuncias-section {
+      background-color: #111;
+      color: #fff;
+      padding: 60px 20px;
       text-align: center;
     }
 
-    .section:nth-child(even) {
-      background-color: #f1f1f1;
-    }
-
-    .dark-section {
-      background-color: #222;
-      color: #fff;
-    }
-
-    .light-section {
-      background-color: #f1f1f1;
-      color: #222;
-    }
-
-    .section h2 {
-      margin-bottom: 20px;
-      font-size: 2em;
-    }
-
-    .section p {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-
-    .section a {
+    .denuncias-section a {
       color: #fff;
       text-decoration: underline;
     }
@@ -117,37 +73,32 @@
   </style>
 </head>
 <body>
-
-  <!-- Menú de navegación -->
   <header>
-    <img src="Logo_Naviera_Travesia.png" alt="Naviera Travesía" />
+    <div class="logo">
+      <img src="Logo_Naviera_Travesia.png" alt="Naviera Travesía" />
+    </div>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="contacto.html">Contacto</a>
     </nav>
   </header>
 
-  <!-- Imagen destacada -->
   <div class="hero">
-    <h1>Naviera Travesía</h1>
+    <h1>NAVIERA TRAVESÍA</h1>
   </div>
 
-  <!-- Canal de denuncias -->
-  <div class="section dark-section">
+  <div class="denuncias-section">
     <h2>Canal de Denuncias</h2>
     <p>
-      Para reportar cualquier irregularidad o situación negligente, por favor dirígete a: <br><br>
+      Para reportar cualquier irregularidad o situación negligente, por favor dirígete a:<br /><br />
       <a href="https://navieratravesia.canaldenunciasanonimas.com/home" target="_blank">
         Canal de Denuncias Naviera Travesía
       </a>
     </p>
   </div>
 
-  <!-- Pie de página -->
   <div class="footer">
     &copy; 2025 Naviera Travesía. Todos los derechos reservados.
   </div>
-
 </body>
 </html>
-
