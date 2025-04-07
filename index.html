@@ -6,59 +6,54 @@
   <title>Naviera Travesía</title>
   <link rel="icon" type="image/png" href="descargar.png" />
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9f9f9;
       color: #222;
-      scroll-behavior: smooth;
-    }
-
-    /* Navegación */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #222;
-      padding: 15px 0;
-      z-index: 1000;
-      text-align: center;
-    }
-
-    .navbar ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .navbar ul li {
-      display: inline;
-      margin: 0 20px;
-    }
-
-    .navbar ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .navbar ul li a:hover {
-      color: #ccc;
     }
 
     header {
-      background: #ffffff;
-      text-align: center;
-      padding: 100px 10px 30px;
+      background: #222;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     header img {
-      max-width: 200px;
+      max-height: 40px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff3c3c;
     }
 
     .hero {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('WB_Sooke_2.jpg');
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('WB_Sooke_2.jpg');
       background-size: cover;
       background-position: center;
       height: 60vh;
@@ -68,10 +63,14 @@
     }
 
     .hero h1 {
-      background: rgba(255, 255, 255, 0.8);
-      padding: 20px;
-      font-size: 2.5em;
-      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+      font-size: 2.8em;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px 40px;
+      border-radius: 10px;
     }
 
     .section {
@@ -118,24 +117,23 @@
   </style>
 </head>
 <body>
-  <!-- Menú de navegación -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#inicio">INICIO</a></li>
-      <li><a href="#canal">CANAL DE DENUNCIAS</a></li>
-      <li><a href="#contacto">CONTACTO</a></li>
-    </ul>
-  </nav>
 
-  <header id="inicio">
+  <!-- Menú de navegación -->
+  <header>
     <img src="Logo_Naviera_Travesia.png" alt="Naviera Travesía" />
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
   </header>
 
+  <!-- Imagen destacada -->
   <div class="hero">
     <h1>Naviera Travesía</h1>
   </div>
 
-  <div id="canal" class="section dark-section">
+  <!-- Canal de denuncias -->
+  <div class="section dark-section">
     <h2>Canal de Denuncias</h2>
     <p>
       Para reportar cualquier irregularidad o situación negligente, por favor dirígete a: <br><br>
@@ -145,7 +143,8 @@
     </p>
   </div>
 
-  <div id="contacto" class="section light-section">
+  <!-- Contacto simple -->
+  <div class="section light-section">
     <h2>Contacto</h2>
     <p>
       Si deseas comunicarte con nosotros:<br><br>
@@ -153,9 +152,11 @@
     </p>
   </div>
 
+  <!-- Pie de página -->
   <div class="footer">
     &copy; 2025 Naviera Travesía. Todos los derechos reservados.
   </div>
+
 </body>
 </html>
 
