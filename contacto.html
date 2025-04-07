@@ -53,15 +53,15 @@
       color: #ff3c3c;
     }
 
-    nav a:not(:first-child)::before {
-      content: '•';
-      color: red;
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-size: 20px;
-    }
-
+ nav a:not(:first-child)::before {
+  content: '•';
+  color: red;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+}
     .section {
       padding: 50px 20px;
       text-align: center;
