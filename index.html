@@ -41,11 +41,10 @@
 nav a:not(:first-child)::before {
   content: '•';
   color: red;
-  font-size: 20px;           /* ← Tamaño más grande, como antes */
-  margin-right: 10px;        /* ← Separación entre punto y texto */
-  vertical-align: middle;    /* ← Alineación centrada verticalmente */
-  display: inline-block;
-  line-height: 1;
+  font-size: 16px;           /* Buen tamaño sin desalinear */
+  margin-right: 10px;
+  position: relative;
+  top: -1px;                 /* Ajuste vertical fino */
 }
     .hero {
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('WB_Sooke_2.jpg');
