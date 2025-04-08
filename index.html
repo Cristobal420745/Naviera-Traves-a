@@ -25,29 +25,37 @@
       max-height: 80px;
     }
 
-    nav a {
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-item a {
       color: #000;
       text-decoration: none;
       font-weight: bold;
-      margin-left: 20px;
-      position: relative;
-      padding-left: 15px;
+      transition: color 0.3s ease;
     }
 
-    nav a:hover {
+    .nav-item a:hover {
       color: #ff3c3c;
     }
 
-nav a:not(:first-child)::before {
-  content: '•';
-  color: red;
-  font-size: 12px;
-  margin: 0 6px 0 12px; /* izquierda: espacio con el enlace anterior, derecha: más corto para acercarlo */
-  position: relative;
-  top: -1px; /* Ajusta la altura para alinearse mejor con el texto */
-}
+    .dot {
+      font-size: 10px;
+      color: red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: -1px;
+    }
+
+    /* Imagen de fondo */
     .hero {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('WB_Sooke_2.jpg');
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('WB_Sooke_2.jpg');
       background-size: cover;
       background-position: center;
       height: 80vh;
@@ -64,6 +72,7 @@ nav a:not(:first-child)::before {
       border-radius: 10px;
     }
 
+    /* Secciones */
     .section {
       padding: 50px 20px;
       text-align: center;
@@ -79,6 +88,7 @@ nav a:not(:first-child)::before {
       text-decoration: underline;
     }
 
+    /* Footer */
     .footer {
       background: #eaeaea;
       text-align: center;
@@ -89,12 +99,15 @@ nav a:not(:first-child)::before {
   </style>
 </head>
 <body>
+
   <header>
     <img src="descargar (2).png" alt="Naviera Travesía" />
     <nav>
-      <a href="index.html">Inicio</a>
-      <a href="contacto.html">Contacto</a>
-      <a href="https://navieratravesia.canaldenunciasanonimas.com/home" target="_blank">Canal de Denuncias</a>
+      <span class="nav-item"><a href="index.html">Inicio</a></span>
+      <span class="dot">•</span>
+      <span class="nav-item"><a href="contacto.html">Contacto</a></span>
+      <span class="dot">•</span>
+      <span class="nav-item"><a href="https://navieratravesia.canaldenunciasanonimas.com/home" target="_blank">Canal de Denuncias</a></span>
     </nav>
   </header>
 
@@ -104,7 +117,9 @@ nav a:not(:first-child)::before {
 
   <div class="section dark-section">
     <h2>Canal de Denuncias</h2>
-    <p>Para reportar cualquier irregularidad o situación negligente, por favor dirígete a:</p>
+    <p>
+      Para reportar cualquier irregularidad o situación negligente, por favor dirígete a:
+    </p>
     <p>
       <a href="https://navieratravesia.canaldenunciasanonimas.com/home" target="_blank">
         Canal de Denuncias Naviera Travesía
@@ -115,8 +130,8 @@ nav a:not(:first-child)::before {
   <div class="footer">
     &copy; 2025 Naviera Travesía. Todos los derechos reservados.
   </div>
+
 </body>
 </html>
-
 
 
