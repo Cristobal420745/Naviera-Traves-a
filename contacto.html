@@ -38,28 +38,217 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 30px;
     }
 
-    .nav-item a {
+    nav a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s;
     }
 
-    .nav-item a:hover {
+    nav a:hover {
       color: #ff3c3c;
     }
 
-    .dot {
-      font-size: 20px;
-      color: red;
+    nav a:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: #f1f1f1;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2.5em;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .formulario {
+      background: #fff;
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    button {
+      background-color: #222;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #444;
+    }
+
+    .footer {
+      background: #eaeaea;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 30px;
+      color: #0066cc;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="descargar (2).png" alt="Naviera Travesía" />
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="https://navieratravesia.canaldenunciasanonimas.com/home" target="_blank">Canal de Denuncias</a>
+    </nav>
+  </header>
+
+  <div class="section">
+    <h1>Contacto</h1>
+    <p>Si deseas comunicarte con nosotros, por favor completa el siguiente formulario:</p>
+
+    <div class="formulario">
+      <form action="https://formsubmit.co/tu-correo@tudominio.com" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required />
+        <input type="email" name="correo" placeholder="Correo electrónico" required />
+        <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://navieratravesia.github.io/Naviera-Traves-a/">
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <p class="back-link">
+      <a href="index.html">&larr; Volver al inicio</a>
+    </p>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Naviera Travesía. Todos los derechos reservados.
+  </div>
+</body>
+</html>
+"""
+
+# Guardar el archivo HTML actualizado
+output_path = Path("/mnt/data/contacto.html")
+output_path.write_text(updated_contact_html, encoding="utf-8")
+
+output_path.name
+
+Analizado
+python
+Mostrar siempre los detalles
+
+Copiar
+from pathlib import Path
+
+# Código actualizado para formulario con envío a correo usando FormSubmit
+updated_contact_html = """
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Naviera Travesía</title>
+  <link rel="icon" type="image/png" href="descargar.png" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: white;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      max-height: 80px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
       position: relative;
-      top: -1px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff3c3c;
+    }
+
+    nav a:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      background-color: red;
+      border-radius: 50%;
     }
 
     .section {
@@ -131,15 +320,9 @@
   <header>
     <img src="Logo_Naviera_Travesia.png" alt="Naviera Travesía" />
     <nav>
-      <span class="nav-item"><a href="index.html">Inicio</a></span>
-      <span class="dot">•</span>
-      <span class="nav-item"><a href="contacto.html">Contacto</a></span>
-      <span class="dot">•</span>
-      <span class="nav-item">
-        <a href="https://navieratravesia.canaldenunciasanonimas.com/home" target="_blank">
-          Canal de Denuncias
-        </a>
-      </span>
+      <a href="index.html">Inicio</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="https://navieratravesia.canaldenunciasanonimas.com/home" target="_blank">Canal de Denuncias</a>
     </nav>
   </header>
 
@@ -148,10 +331,14 @@
     <p>Si deseas comunicarte con nosotros, por favor completa el siguiente formulario:</p>
 
     <div class="formulario">
-      <form action="#" method="post">
+      <form action="https://formsubmit.co/TU_CORREO_AQUI" method="POST">
         <input type="text" name="nombre" placeholder="Nombre" required />
         <input type="email" name="correo" placeholder="Correo electrónico" required />
         <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://navieratravesia.github.io/Naviera-Traves-a/">
+
         <button type="submit">Enviar</button>
       </form>
     </div>
